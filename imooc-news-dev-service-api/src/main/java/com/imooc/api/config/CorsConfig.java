@@ -14,7 +14,7 @@ public class CorsConfig {
 
     @Bean
     public CorsFilter corsFilter() {
-        // 1. 添加cors配置信息
+        // 1. 添加cors配置信息 配置跨域信息
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedOrigin("*");
         // 设置是否发送cookie信息

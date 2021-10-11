@@ -6,8 +6,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@PropertySource("classpath:aliyun.properties")
-@ConfigurationProperties(prefix = "aliyun")
+@PropertySource("classpath:aliyun.properties")//指定对应配置的路径
+@ConfigurationProperties(prefix = "aliyun")//配置类指定所属的前缀自动注入
 public class AliyunResource {
     private String accessKeyID;
     private String accessKeySecret;

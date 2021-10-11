@@ -19,7 +19,7 @@ public class PassportInterceptor implements HandlerInterceptor {
     public static final String MOBILE_SMSCODE = "mobile:smscode";
 
     /**
-     * 拦截请求，访问controller之前
+     * 拦截请求，访问controller之前 在访问之前拦截对应的短信发送功能
      * @param request
      * @param response
      * @param handler
@@ -29,9 +29,9 @@ public class PassportInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        // 获得用户ip
+        // 获得用户ip 根据ip检测用户是否重复发送
         String userIp = IPUtil.getRequestIp(request);
-
+        //阻止触发短信重新发送
         boolean keyIsExist = redis.keyIsExist(MOBILE_SMSCODE + ":" + userIp);
 
         if (keyIsExist) {
