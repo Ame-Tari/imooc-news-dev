@@ -19,7 +19,7 @@
                         password="root">
         </jdbcConnection>
 
-        <!-- 对应生成的pojo所在包 -->
+        <!-- 对应生成的pojo所在包 生成 -->
         <javaModelGenerator targetPackage="com.imooc.pojo" targetProject="mybatis-generator-database/src/main/java"/>
 
 		<!-- 对应生成的mapper所在目录 -->
