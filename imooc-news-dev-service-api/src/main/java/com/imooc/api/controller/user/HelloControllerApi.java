@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public interface HelloControllerApi {
 
     /**
-     * api 的作用：
+     * api 的作用：//
      * api 就相当于企业的领导，老板，部门经理
      * 其他的服务层都是实现，他们就相当于员工，只做事情
      * 老板（开发人员）来看一下每个人（服务）的进度，做什么事。
